@@ -738,7 +738,7 @@ line-height:1.8;
 
 .founder-content h3{
     font-family: "Instrument Serif", serif;
-    font-size: 55px;
+    font-size: 40px;
     font-weight: 400;
     line-height: 72px;
     letter-spacing: .04em;
@@ -748,23 +748,14 @@ line-height:1.8;
 }
 
 .founder-content h2{
-
-    font-family:"Instrument Serif",serif;
-
-    font-style:italic;
-
-    font-size:125px;
-
-    font-weight:400;
-
-    line-height:120px;
-
-    color:#000;
-
-    margin:5px 0 40px;
-
-    text-shadow:
-        0 5px 10px rgba(0,0,0,.15);
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 95px;
+    font-weight: 400;
+    line-height: 120px;
+    margin-top: -24px;
+    color: #000;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .15);
 }
 
 /* Paragraph */
@@ -773,7 +764,7 @@ line-height:1.8;
 
     font-family:"Instrument Serif",serif;
 
-    font-size:20px;
+    font-size:18px;
 
     line-height:30px;
 
@@ -830,7 +821,7 @@ line-height:50px;
 
 .founder-content h2{
 
-font-size:65px;
+font-size:55px;
 
 line-height:70px;
 
@@ -864,7 +855,7 @@ line-height:28px;
   }
   .jsm-card .eyebrow{
     color: #2b2b2b;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 500;
     font-family: 'Instrument Serif', sans-serif;
     text-transform: uppercase;
@@ -895,7 +886,7 @@ line-height:28px;
   .jsm-card > p{
     font-family: 'Instrument Serif', serif;
     color: #333;
-    font-size: 32px;
+    font-size: 29px;
     line-height: 1.8;
   }
 
@@ -965,7 +956,7 @@ line-height:28px;
 
 .left-photo{
     width: 100%;
-    height: 215px;
+    height: 208px;
     object-fit: cover;
 }
 
@@ -990,7 +981,7 @@ line-height:28px;
 
 .photo-row img{
     width:100%;
-    height: 215px;
+    height: 211px;
     object-fit:cover;
 }
 @media(max-width:768px){
@@ -1353,8 +1344,7 @@ line-height:28px;
   }
 
   .wyl-topic-content .pink-box li{
-    font-size: 16px !important;
-    padding: 3px 0;
+    font-size: 20px !important;
   }
 
   .wyl-topic-content h3{
@@ -1367,7 +1357,7 @@ line-height:28px;
   }
 
   .cert {
-    height: 215px;
+    height: 173px;
 }
 }
   /*==============================
@@ -1831,7 +1821,7 @@ line-height:28px;
       padding: 38px 34px;
       text-align: left;
     }
-    .kb-card p{ max-width: 100%; }
+    .kb-card p{ max-width: 100%; text-align: center;}
     .jsm-photos{ grid-template-columns: 1fr 1fr; }
     .jsm-photos img:nth-child(3){ grid-column: span 2; height: 220px; }
     .celeb-row{ grid-template-columns: repeat(4, 1fr); }
@@ -2247,4 +2237,50 @@ font-size:13px;
     font-family: "Instrument Serif", serif;
 }
 
+    .jsm-card > p {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+}
+
+
+
+/* ===== Celebrity Row ===== */
+
+.celeb-row{
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    align-items: start;
+}
+
+.celeb-item{
+    margin: 0;
+    text-align: center;
+}
+
+.celeb-item img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.celeb-item img:hover{
+    transform: scale(1.06);
+    position: relative;
+    z-index: 2;
+}
+
+.celeb-item figcaption{
+    margin-top: 8px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #1b1b1b;
+    line-height: 1.2;
+    text-align: center;
 }
