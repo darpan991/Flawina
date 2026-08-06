@@ -830,7 +830,7 @@ line-height:50px;
 
 .founder-content h2{
 
-font-size:70px;
+font-size:65px;
 
 line-height:70px;
 
@@ -965,7 +965,7 @@ line-height:28px;
 
 .left-photo{
     width: 100%;
-    height: 279px;
+    height: 215px;
     object-fit: cover;
 }
 
@@ -990,7 +990,7 @@ line-height:28px;
 
 .photo-row img{
     width:100%;
-    height: 279px;
+    height: 215px;
     object-fit:cover;
 }
 @media(max-width:768px){
@@ -1183,7 +1183,6 @@ line-height:28px;
 .wyl-banner-inner h2{
   font-family: 'Instrument Serif', serif;
   font-style: italic;
-  font-weight: 600;
   color: #161616;
   font-size: clamp(30px, 5vw, 52px);
   margin: 0;
@@ -1289,6 +1288,88 @@ line-height:28px;
   width: 505px !important;
 }
 
+
+/* ---------- RESPONSIVE FIX FOR 13"-15" LAPTOPS (1280px - 1440px) ---------- */
+@media (max-width: 1440px) {
+  .wyl-topics{
+    max-width: 960px;
+    gap: 44px;
+  }
+
+  .wyl-topic{
+    gap: 28px;
+  }
+
+  .wyl-topic-content .pink-box{
+    padding: 28px 22px;
+  }
+
+  .wyl-topic-content .pink-box li{
+    font-size: 20px !important;
+    line-height: 1.5;
+  }
+
+  .wyl-topic-content h3{
+    font-size: clamp(17px, 2vw, 28px);
+  }
+
+  .imgdesign{
+    width: 100% !important;
+    max-width: 505px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .wyl-topics{
+    max-width: 900px;
+    gap: 38px;
+  }
+
+  .wyl-topic-content .pink-box{
+    padding: 22px 18px;
+  }
+
+  .wyl-topic-content .pink-box li{
+    font-size: 18px !important;
+  }
+
+  .wyl-topic-media img{
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .wyl-topics{
+    max-width: 820px;
+    gap: 32px;
+  }
+
+  .wyl-topic{
+    gap: 22px;
+  }
+
+  .wyl-topic-content .pink-box{
+    padding: 18px 16px;
+  }
+
+  .wyl-topic-content .pink-box li{
+    font-size: 16px !important;
+    padding: 3px 0;
+  }
+
+  .wyl-topic-content h3{
+    font-size: clamp(15px, 1.8vw, 22px);
+    margin-bottom: 10px;
+  }
+
+  .wyl-topic-media img{
+    min-height: 170px;
+  }
+
+  .cert {
+    height: 215px;
+}
+}
   /*==============================
       FEEDBACK SECTION
 ==============================*/
