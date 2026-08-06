@@ -381,19 +381,13 @@
 /* ABOUT */
 
 .about-academy .eyebrow{
-
     font-family:'Instrument Serif', serif;
-
     font-size:52px;
-
     color:#BC22FF;
-
     letter-spacing:2px;
-
     margin:0;
-
-    text-shadow:
-        2px 2px 8px rgba(140,0,255,.18);
+    text-shadow: 2px 2px 8px rgba(140,0,255,.18);
+    text-transform:uppercase;
 }
 
 /* MAIN HEADING */
@@ -2141,6 +2135,35 @@ font-size:13px;
 
 .fh-content li{
     font-size:22px;
+}
+
+}
+
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+  .about-academy .content .eyebrow,
+  .about-academy .content h2 {
+    display: inline;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .about-academy .content .eyebrow {
+    color: #8800c3 !important;
+    font-size: 32px !important; 
+    font-style: italic;
+    text-transform:capitalize;
+  }
+
+  .about-academy .content h2 {
+    font-size: 32px;
+  }
+
+  .about-academy .eyebrow{
+    font-family: "Instrument Serif", serif;
 }
 
 }
