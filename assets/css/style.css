@@ -44,6 +44,7 @@
   /* ---------- HEADER ---------- */
   header.site-header{
     width: 100%;
+    height: 115px;
     background: var(--lavender);
     text-align: center;
     position: relative;
@@ -54,7 +55,8 @@
   }
 
   .logo img{
-      width: 180px;
+      padding-top: 10px;
+      width: 215px;
       height: auto;
       display: block;
       transition: transform .35s ease;
@@ -76,7 +78,7 @@
         180deg,
         #F4B8C8 0%,
         #F8C0CF 45%,
-        #FCE8EF 80%,
+        #FCE8EF 92%,
         #FFFFFF 100%
     );
 }
@@ -118,7 +120,7 @@
 .pop-card{
     width:300px;
     background:#fff;
-    border:4px solid #fff;
+    /* border:4px solid #fff; */
     border-radius:16px;
     overflow:hidden;
     box-shadow:
@@ -193,7 +195,7 @@
     display:block;
     object-fit:cover;
 
-    padding:5px;
+    /* padding:5px; */
     background:#fff;
     box-sizing:border-box;
 
@@ -214,48 +216,91 @@
 }
 
 /* ===========================
-   BUTTON
+   ENROLL BUTTON SECTION
 =========================== */
 
-.enroll-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+.enroll-section {
+    width: 100%;
+    min-height: 100px;
+    background: #f4b8c8;
 
-    margin-top:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    min-width:250px;
-    height:70px;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
 
-    padding:0 35px;
 
-    font-family:var(--serif-font);
-    font-size:44px;
-    text-decoration:none;
+/* ===========================
+   ENROLL BUTTON
+=========================== */
 
-    color:#8800C3;
+.enroll-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    background:#F1CFFF;
+    min-width: 250px;
+    height: 70px;
+    padding: 0 35px;
 
-    border:4px solid #D79BF8;
-    border-radius:18px;
+    font-family: var(--serif-font);
+    font-size: 44px;
+    line-height: 1;
+    text-decoration: none;
+
+    color: #8800C3;
+    background: #F1CFFF;
+
+    border: 4px solid #D79BF8;
+    border-radius: 18px;
 
     box-shadow:
         0 6px 0 #DD8FFF,
-        0 12px 24px rgba(221,143,255,.35);
+        0 12px 24px rgba(221, 143, 255, 0.35);
 
-    transition:.3s;
+    transition: 0.3s;
+    box-sizing: border-box;
 }
 
-.enroll-btn:hover{
-    transform:translateY(-4px);
+
+/* Hover */
+
+.enroll-btn:hover {
+    transform: translateY(-4px);
+
     box-shadow:
         0 8px 0 #DD8FFF,
-        0 18px 28px rgba(221,143,255,.45);
+        0 18px 28px rgba(221, 143, 255, 0.45);
 }
 
-.enroll-btn:active{
-    transform:translateY(2px);
+
+/* Active */
+
+.enroll-btn:active {
+    transform: translateY(2px);
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .enroll-section {
+        min-height: 90px;
+        padding: 15px 20px;
+    }
+
+    .enroll-btn {
+        min-width: 220px;
+        height: 60px;
+        padding: 0 25px;
+        font-size: 34px;
+    }
 }
 
 /* ===========================
@@ -525,21 +570,9 @@ line-height:1.8;
     bottom:20px;
     background:url("../images/korean-bg.jpg") center/cover no-repeat;
     border-radius:30px;
-    .korean-beauty::before{
-    content:"";
-    position:absolute;
-    top:20px;
-    left:80px;
-    right:80px;
-    bottom:20px;
-    background:url("../images/korean-bg.jpg") center/cover no-repeat;
-    border-radius:30px;
     box-shadow:0 18px 40px rgba(0,0,0,.25);
     z-index:0;
 }
-    z-index:0;
-}
-
 
 /* KB Card  */
 .kb-card{
@@ -817,6 +850,8 @@ font-size:40px;
 
 line-height:50px;
 
+margin-bottom: 15px;
+
 }
 
 .founder-content h2{
@@ -906,6 +941,71 @@ line-height:28px;
     z-index: 2;
     position: relative;
   }
+
+  /* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+    .jsm-wrap{
+        padding:20px 12px 50px;
+    }
+
+    .jsm-card{
+        padding:20px 15px 30px;
+        border-radius:15px;
+    }
+
+    .jsm-card .eyebrow{
+        font-size:20px;
+        line-height:1.3;
+        text-align:center;
+    }
+
+    .jsm-card h2{
+        font-size:42px;
+        line-height:1;
+        margin:10px 0 18px;
+        text-align:center;
+    }
+
+    /* Top 3 Images */
+
+    .jsm-photos{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    /* Celebrity Grid */
+
+    .celeb-row{
+        margin-top:25px;
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .celeb-item{
+        margin:0;
+        text-align:center;
+    }
+
+    .celeb-item img{
+        width:100%;
+        height:190px !important;
+        object-fit:cover;
+        border-radius:8px;
+    }
+
+    .celeb-item figcaption {
+    margin-top: 8px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 19px !important;
+    font-weight: 400;
+    color: #1b1b1b;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 10px !important;
+}
+
+}
 
 
 /*=====================================
@@ -1360,36 +1460,125 @@ line-height:28px;
     height: 173px;
 }
 }
-  /*==============================
-      FEEDBACK SECTION
-==============================*/
+/*==============================*
+* FEEDBACK SECTION
+*==============================*/
 
-.feedback-section{
-    background:#d9d9d9;
-    padding:70px 20px 320px;
-    text-align:center;
+.feedback-section {
+    background: #d9d9d9;
+    padding: 70px 20px 80px;
+    text-align: center;
 }
 
-.feedback-box{
-    max-width:1100px;
-    margin:auto;
+.feedback-box {
+    max-width: 1300px;
+    margin: auto;
 }
 
-.feedback-box h2{
-    font-family:var(--serif-font);
-    font-style:italic;
-    font-size:58px;
-    font-weight:400;
-    line-height:1.2;
-    color:#111;
-    margin-bottom:18px;
+
+/* ==============================
+   HEADING
+============================== */
+
+.feedback-box h2 {
+    font-family: var(--serif-font);
+    font-style: italic;
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #111;
+    margin: 0 0 18px;
 }
 
-.feedback-box p{
-    font-family:var(--serif-font);
-    font-size:20px;
-    line-height:1.6;
-    color:#333;
+.feedback-box p {
+    font-family: var(--serif-font);
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 auto 45px;
+}
+
+
+/* ==============================
+   INSTAGRAM GRID
+============================== */
+
+.instagram-grid {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+/* Instagram individual card */
+
+.instagram-card {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Instagram official embed */
+
+.instagram-card .instagram-media {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    border-radius: 14px !important;
+
+    background: #fff;
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 1000px) {
+
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 650px) {
+
+    .feedback-section {
+        padding: 50px 12px 60px;
+    }
+
+    .feedback-box h2 {
+        font-size: 42px;
+    }
+
+    .feedback-box p {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .instagram-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+        gap: 20px;
+    }
+
 }
 
 
@@ -1663,149 +1852,418 @@ line-height:28px;
 
 
 }
-  /* ---------- ENQUIRY POPUP ---------- */
-  .enquiry-overlay{
+  /* =========================================
+   ENQUIRY POPUP
+========================================= */
+
+.enquiry-popup {
     position: fixed;
     inset: 0;
-    background: rgba(45, 20, 60, 0.55);
-    backdrop-filter: blur(3px);
+    z-index: 99999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.enquiry-popup.active {
+    display: flex;
+}
+
+
+/* DARK BLURRED BACKGROUND */
+
+.enquiry-popup-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(25, 10, 30, 0.68);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+
+/* POPUP BOX */
+
+.enquiry-popup-box {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 560px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    padding: 38px 40px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.30);
+
+    animation: enquiryPopupIn 0.3s ease;
+}
+
+
+@keyframes enquiryPopupIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* CLOSE BUTTON */
+
+.enquiry-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 42px;
+    height: 42px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .35s ease, visibility .35s ease;
-  }
-  .enquiry-overlay.active{
-    opacity: 1;
-    visibility: visible;
-  }
-  .enquiry-modal{
-    background: #fff;
-    width: 100%;
-    max-width: 460px;
-    border-radius: 20px;
-    padding: 40px 36px 34px;
-    position: relative;
-    box-shadow: 0 40px 80px -20px rgba(90, 30, 130, .5);
-    transform: translateY(24px) scale(.97);
-    transition: transform .4s cubic-bezier(.2,.8,.2,1);
-    max-height: 90vh;
-    overflow-y: auto;
-  }
-  .enquiry-overlay.active .enquiry-modal{
-    transform: translateY(0) scale(1);
-  }
-  .enquiry-close{
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+
     border: none;
-    background: #f3e6fa;
-    color: #6b2fb3;
-    font-size: 15px;
+    border-radius: 50%;
+
+    background: #f4b8c8;
+    color: #ffffff;
+
+    font-size: 27px;
+    line-height: 1;
+
     cursor: pointer;
-    transition: background .25s ease, transform .25s ease;
-  }
-  .enquiry-close:hover{
-    background: #e0c2f2;
+
+    transition: all 0.3s ease;
+}
+
+.enquiry-close:hover {
+    background: #d98ca5;
     transform: rotate(90deg);
-  }
-  .enquiry-modal h3{
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-weight: 600;
-    color: #6b2fb3;
-    font-size: clamp(24px, 3.4vw, 30px);
-    margin-bottom: 6px;
-  }
-  .enquiry-modal .enquiry-sub{
-    font-family: 'Jost', sans-serif;
-    color: #7a6a86;
+}
+
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.enquiry-form h3 {
+    margin: 0 45px 8px 0;
+
+    font-family: inherit;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #3d263b;
+}
+
+.enquiry-sub {
+    margin: 0 0 25px;
+
+    color: #777;
+
     font-size: 14px;
-    margin-bottom: 26px;
-  }
-  .enquiry-field{
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.enquiry-field {
     margin-bottom: 18px;
-  }
-  .enquiry-field label{
+}
+
+.enquiry-field label {
     display: block;
-    font-family: 'Jost', sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    letter-spacing: .5px;
-    color: #4a3b5c;
+
     margin-bottom: 7px;
-  }
-  .enquiry-field input,
-  .enquiry-field select,
-  .enquiry-field textarea{
-    width: 100%;
-    font-family: 'Jost', sans-serif;
-    font-size: 14.5px;
-    color: #2c2530;
-    padding: 11px 14px;
-    border: 1.5px solid #e6d5f0;
-    border-radius: 9px;
-    background: #fbf7fd;
-    outline: none;
-    transition: border-color .25s ease, background .25s ease;
-  }
-  .enquiry-field textarea{
-    resize: vertical;
-    min-height: 80px;
-  }
-  .enquiry-field input:focus,
-  .enquiry-field select:focus,
-  .enquiry-field textarea:focus{
-    border-color: #b98be0;
-    background: #fff;
-  }
-  .enquiry-submit{
-    width: 100%;
-    margin-top: 6px;
-    padding: 14px;
-    font-family: 'Instrument Serif', serif;
+
+    color: #3d263b;
+
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: 1.5px;
-    font-size: 16px;
-    color: #5a2a8c;
-    background: #d9b8f0;
-    border: 2px solid #b98be0;
-    border-radius: 10px;
+}
+
+
+.enquiry-field input,
+.enquiry-field select,
+.enquiry-field textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e1d5dc;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+
+/* INPUT + SELECT */
+
+.enquiry-field input,
+.enquiry-field select {
+
+    height: 48px;
+
+    padding: 0 14px;
+}
+
+
+/* TEXTAREA */
+
+.enquiry-field textarea {
+
+    min-height: 105px;
+
+    padding: 13px 14px;
+
+    resize: vertical;
+}
+
+
+/* PLACEHOLDER */
+
+.enquiry-field input::placeholder,
+.enquiry-field textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* FOCUS */
+
+.enquiry-field input:focus,
+.enquiry-field select:focus,
+.enquiry-field textarea:focus {
+
+    border-color: #f4b8c8;
+
+    box-shadow: 0 0 0 3px rgba(244, 184, 200, 0.18);
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.enquiry-submit {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #f4b8c8;
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
     cursor: pointer;
-    transition: box-shadow .35s ease, transform .3s ease, background .3s ease;
-  }
-  .enquiry-submit:hover{
-    box-shadow: 0 0 22px 4px rgba(185,139,224,0.55);
+
+    transition: all 0.3s ease;
+}
+
+.enquiry-submit:hover {
+
+    background: #d98ca5;
+
     transform: translateY(-2px);
-    background: #e6cbf7;
-  }
-  .enquiry-success{
-    display: none;
+
+    box-shadow: 0 8px 20px rgba(217, 140, 165, 0.25);
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.enquiry-success {
     text-align: center;
-    padding: 20px 0 6px;
-  }
-  .enquiry-success .success-icon{
-    font-size: 42px;
-    margin-bottom: 14px;
-  }
-  .enquiry-success h3{
-    margin-bottom: 10px;
-  }
-  .enquiry-success p{
-    font-family: 'Jost', sans-serif;
-    color: #6a5a76;
-    font-size: 14.5px;
+
+    padding: 20px 10px;
+}
+
+.enquiry-success h3 {
+    margin: 15px 0 10px;
+
+    color: #3d263b;
+
+    font-size: 28px;
+}
+
+.enquiry-success p {
+
+    margin: 0 auto;
+
+    max-width: 430px;
+
+    color: #777;
+
+    font-size: 14px;
+
     line-height: 1.7;
-  }
-  .enquiry-modal.submitted .enquiry-form{ display: none; }
-  .enquiry-modal.submitted .enquiry-success{ display: block; }
+}
+
+
+.success-icon {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* SUCCESS CLOSE */
+
+.success-close {
+
+    margin-top: 22px;
+
+    padding: 12px 30px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #f4b8c8;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.success-close:hover {
+    background: #d98ca5;
+}
+
+
+/* =========================================
+   BODY LOCK WHEN POPUP OPEN
+========================================= */
+
+body.popup-open {
+    overflow: hidden;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .enquiry-popup {
+        padding: 12px;
+    }
+
+    .enquiry-popup-box {
+
+        max-width: 100%;
+
+        max-height: 92vh;
+
+        padding: 30px 20px 25px;
+
+        border-radius: 17px;
+    }
+
+
+    .enquiry-close {
+
+        top: 10px;
+        right: 10px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 23px;
+    }
+
+
+    .enquiry-form h3 {
+
+        font-size: 24px;
+
+        margin-right: 40px;
+    }
+
+
+    .enquiry-sub {
+
+        font-size: 13px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .enquiry-field {
+
+        margin-bottom: 15px;
+    }
+
+
+    .enquiry-field input,
+    .enquiry-field select {
+
+        height: 46px;
+
+        font-size: 14px;
+    }
+
+
+    .enquiry-field textarea {
+
+        min-height: 90px;
+    }
+
+
+    .enquiry-submit {
+
+        min-height: 48px;
+    }
+
+}
 
   /* ---------- RESPONSIVE: TABLET ---------- */
   @media (max-width: 980px){
@@ -1848,7 +2306,7 @@ line-height:28px;
   }
   .section-inner{padding:0 22px;}
   .logo{display:inline-block;}
-  .logo img{width:130px;height:auto;display:block;}
+  .logo img{width:200px;height:auto;display:block;}
   .hero{padding:50px 0 60px;}
   .card-row{gap:24px;margin-top:40px;}
   .pop-card{width:100%;max-width:320px;}
@@ -2283,4 +2741,128 @@ font-size:13px;
     color: #1b1b1b;
     line-height: 1.2;
     text-align: center;
+}
+
+
+
+/* =================================
+   FLOATING WHATSAPP BUTTON
+================================= */
+
+.floating-whatsapp {
+    position: fixed !important;
+    right: 25px !important;
+    bottom: 25px !important;
+
+    width: 60px !important;
+    height: 60px !important;
+
+    background: #25D366 !important;
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    z-index: 999999 !important;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+
+    text-decoration: none !important;
+    line-height: 1 !important;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* WhatsApp Icon Container */
+
+.floating-whatsapp .whatsapp-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* SVG */
+
+.floating-whatsapp svg {
+    display: block !important;
+
+    width: 36px !important;
+    height: 36px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    fill: #fff !important;
+}
+
+
+/* Hover */
+
+.floating-whatsapp:hover {
+    transform: scale(1.08);
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 768px) {
+
+    .floating-whatsapp {
+        width: 55px !important;
+        height: 55px !important;
+
+        right: 18px !important;
+        bottom: 18px !important;
+    }
+
+    .floating-whatsapp .whatsapp-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .floating-whatsapp svg {
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .floating-whatsapp {
+        width: 52px !important;
+        height: 52px !important;
+
+        right: 14px !important;
+        bottom: 14px !important;
+    }
+
+    .floating-whatsapp .whatsapp-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .floating-whatsapp svg {
+        width: 30px !important;
+        height: 30px !important;
+    }
 }
