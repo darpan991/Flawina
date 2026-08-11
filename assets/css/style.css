@@ -1926,7 +1926,7 @@ line-height:28px;
     border: none;
     border-radius: 50%;
 
-    background: #f4b8c8;
+    background: #ff648d;
     color: #ffffff;
 
     font-size: 27px;
@@ -1938,7 +1938,7 @@ line-height:28px;
 }
 
 .enquiry-close:hover {
-    background: #d98ca5;
+    background: #ff8dab;
     transform: rotate(90deg);
 }
 
@@ -2072,7 +2072,7 @@ line-height:28px;
     border: none;
     border-radius: 30px;
 
-    background: #f4b8c8;
+    background: #ff648d;
     color: #ffffff;
 
     font-family: inherit;
@@ -2089,7 +2089,7 @@ line-height:28px;
 
 .enquiry-submit:hover {
 
-    background: #d98ca5;
+    background: #ff9fb8;
 
     transform: translateY(-2px);
 
@@ -2730,18 +2730,20 @@ font-size:13px;
 
 
 /* =================================
-   FLOATING WHATSAPP BUTTON
+   FLOATING CONTACT BUTTON
 ================================= */
 
-.floating-whatsapp {
+.floating-contact {
     position: fixed !important;
     right: 25px !important;
-    bottom: 25px !important;
+    bottom: 95px !important;
 
     width: 60px !important;
     height: 60px !important;
 
-    background: #25D366 !important;
+    background: #6342fe !important;
+    color: #fff !important;
+
     border-radius: 50% !important;
 
     display: flex !important;
@@ -2756,43 +2758,64 @@ font-size:13px;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
 
     text-decoration: none !important;
-    line-height: 1 !important;
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-/* WhatsApp Icon Container */
-
-.floating-whatsapp .whatsapp-icon {
-    width: 36px;
-    height: 36px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 !important;
-    padding: 0 !important;
+.floating-contact i {
+    font-size: 27px !important;
+    color: #fff !important;
 }
 
 
-/* SVG */
+/* Contact Hover */
 
-.floating-whatsapp svg {
-    display: block !important;
-
-    width: 36px !important;
-    height: 36px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    fill: #fff !important;
+.floating-contact:hover {
+    transform: scale(1.08);
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.30);
 }
 
 
-/* Hover */
+/* =================================
+   FLOATING WHATSAPP BUTTON
+================================= */
+
+.floating-whatsapp {
+    position: fixed !important;
+    right: 25px !important;
+    bottom: 25px !important;
+
+    width: 60px !important;
+    height: 60px !important;
+
+    background: #25D366 !important;
+    color: #fff !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    z-index: 999999 !important;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+
+    text-decoration: none !important;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-whatsapp i {
+    font-size: 35px !important;
+    color: #fff !important;
+}
+
+
+/* WhatsApp Hover */
 
 .floating-whatsapp:hover {
     transform: scale(1.08);
@@ -2806,6 +2829,19 @@ font-size:13px;
 
 @media (max-width: 768px) {
 
+    .floating-contact {
+        width: 55px !important;
+        height: 55px !important;
+
+        right: 18px !important;
+        bottom: 86px !important;
+    }
+
+    .floating-contact i {
+        font-size: 25px !important;
+    }
+
+
     .floating-whatsapp {
         width: 55px !important;
         height: 55px !important;
@@ -2814,14 +2850,8 @@ font-size:13px;
         bottom: 18px !important;
     }
 
-    .floating-whatsapp .whatsapp-icon {
-        width: 32px;
-        height: 32px;
-    }
-
-    .floating-whatsapp svg {
-        width: 32px !important;
-        height: 32px !important;
+    .floating-whatsapp i {
+        font-size: 32px !important;
     }
 }
 
@@ -2832,6 +2862,19 @@ font-size:13px;
 
 @media (max-width: 480px) {
 
+    .floating-contact {
+        width: 52px !important;
+        height: 52px !important;
+
+        right: 14px !important;
+        bottom: 80px !important;
+    }
+
+    .floating-contact i {
+        font-size: 23px !important;
+    }
+
+
     .floating-whatsapp {
         width: 52px !important;
         height: 52px !important;
@@ -2840,13 +2883,7 @@ font-size:13px;
         bottom: 14px !important;
     }
 
-    .floating-whatsapp .whatsapp-icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .floating-whatsapp svg {
-        width: 30px !important;
-        height: 30px !important;
+    .floating-whatsapp i {
+        font-size: 30px !important;
     }
 }
