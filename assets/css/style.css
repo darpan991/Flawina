@@ -55,7 +55,7 @@
   }
 
   .logo img{
-      padding-top: 10px;
+      padding-top: 15px;
       width: 215px;
       height: auto;
       display: block;
@@ -1744,7 +1744,7 @@ line-height:28px;
 .footer-row{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:250px;
+    gap:50px;
     margin-bottom:80px;
 }
 
